@@ -26,6 +26,17 @@ const GlobalStyle = createGlobalStyle`
         max-width: 100%;
         margin: 0 auto;
     }
+    .smallContainer{
+        width: 41.25rem;
+        padding: 0 1rem;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .mainTitle{
+        font-size:1.75rem ;
+        line-height:2.75rem ;
+        font-weight: bold;
+    }
     .title{
         font-size:1.125rem ;
         line-height:1.75rem ;

@@ -70,15 +70,53 @@ export const SliderStyle = styled.section`
   }
   @media all and (max-width: ${size.large}) {
     .sliderWrapper {
+      padding: 0;
+      background-image: none;
+      &:before{
+        display: none;
+      }
+      .container {
+        padding: 0;
+      }
+      .contactPart {
+        .sliderContact {
+          border-radius: 0;
+        }
+      }
       .sliderItems {
+        flex-wrap: wrap;
+        .contactPart {
+          width: 100%;
+        }
         .honourPart {
           width: 100%;
+          background-image: url(${sliderBg});
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          padding: 2rem 1rem;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(68, 85, 102, 0),
+              rgba(68, 85, 102, 0.75)
+            );
+          }
           h1 {
             text-align: center;
+            position: relative;
           }
           .honour {
             justify-content: center;
-            .honourItem{
+            position:relative ;
+            .honourItem {
               text-align: center;
             }
           }
@@ -90,14 +128,13 @@ export const SliderStyle = styled.section`
     .sliderWrapper {
       .sliderItems {
         .honourPart {
-          
           h1 {
             text-align: center;
           }
           .honour {
-            flex-wrap: wrap;;
+            flex-wrap: wrap;
             gap: 0 !important;
-            .honourItem{
+            .honourItem {
               padding: 0.75rem;
               text-align: center;
               width: 50%;

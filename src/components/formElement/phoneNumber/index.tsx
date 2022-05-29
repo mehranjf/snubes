@@ -21,7 +21,10 @@ const PhoneNumber = ({ label, row = true, phoneRef,error,setPhoneError }: phoneN
   const getGeoInfo = () => {
     axios.get("https://ipapi.co/json/").then((response: any) => {
       setCountryCode(response.data.country_code);
-    });
+    })
+    .catch(()=>{
+      console.log("error on api call")
+    })
   };
   return (
     <PhoneNumberStyle row={row}>

@@ -1,17 +1,16 @@
-import useWindowDimensions from "../../shared/customHook/useWindowDimensions";
 import { sliderData } from "./data";
 import SliderContact from "./sliderContact";
 import { SliderStyle } from "./style";
 
 const Slider = () => {
-  const { width } = useWindowDimensions();
   return (
     <SliderStyle>
-      {width < 992 ? <SliderContact /> : null}
       <div className="sliderWrapper">
         <div className="container">
           <div className="sliderItems">
-            {width >= 992 ? <SliderContact /> : null}
+            <div className="contactPart">
+              <SliderContact />
+            </div>
 
             <div className="honourPart">
               <h1>Welcome to Europe’s largest call center database</h1>
