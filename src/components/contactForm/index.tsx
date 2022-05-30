@@ -9,7 +9,7 @@ import FormInput from "../formElement/input/input";
 import PhoneNumber from "../formElement/phoneNumber";
 import { ContactFormStyle } from "./style";
 
-const ContactForm = () => {
+const ContactForm = ({ row = true }: { row?: boolean }) => {
   const companyRef = useRef<HTMLInputElement>(null);
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
@@ -68,6 +68,7 @@ const ContactForm = () => {
         maxLength={80}
         error={companyError}
         onChange={() => setCompanyError(false)}
+        row={row}
       />
       <FormInput
         label="name"
@@ -77,12 +78,14 @@ const ContactForm = () => {
         maxLength={50}
         error={nameError}
         onChange={() => setNameError(false)}
+        row={row}
       />
       <PhoneNumber
         label="Phone"
         phoneRef={phoneRef}
         error={phoneError}
         setPhoneError={setPhoneError}
+        row={row}
       />
       <FormInput
         label="E-mail"
@@ -92,8 +95,9 @@ const ContactForm = () => {
         type={"email"}
         error={emailError}
         onChange={() => setEmailError(false)}
+        row={row}
       />
-      <FormButton text="Get informed" onClick={handleSendForm} />
+      <FormButton text="Get informed" onClick={handleSendForm} row={row}/>
     </ContactFormStyle>
   );
 };

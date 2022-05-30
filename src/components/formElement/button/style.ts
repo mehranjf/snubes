@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { colors } from "../../../shared/color";
 import { size } from "../../../shared/size";
-
+interface Props {
+  row: boolean;
+}
 export const ButtonStyle = styled.div`
-  margin-left: 5.25rem;
+  margin-left: ${({ row }: Props) => (row ? "5.25rem" : "0")} !important;
   text-align: center;
   margin-top: 1.5rem;
   width: 22rem;

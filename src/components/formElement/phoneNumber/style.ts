@@ -11,8 +11,8 @@ export const PhoneNumberStyle = styled.div`
     align-items: center;
     margin-bottom: 1rem;
     span.label {
-      width: 5.25rem;
-      text-align: ${({ row }: Props) => (row ? "right" : "left")} !important;
+      width: ${({ row }: Props) => (row ? "5.25rem" : "100%")} !important;
+      display: ${({ row }: Props) => (row ? "inline" : "block")} !important;
       padding-right: 0.5rem;
     }
     div.PhoneInput {

@@ -10,7 +10,8 @@ export const InputStyle = styled.label`
   align-items: center;
   margin-bottom: 1rem;
   span.label{
-    width: 5.25rem;
+    width: ${({ row }: Props) => (row ? "5.25rem" : "100%")} !important;
+    display: ${({ row }: Props) => (row ? "inline" : "block")} !important;
     text-align: ${({ row }: Props) => (row ? "right" : "left")} !important;
     padding-right: .5rem;
 

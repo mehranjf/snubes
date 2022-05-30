@@ -9,6 +9,10 @@ export const FooterStyle = styled.footer`
     display: flex;
     justify-content: space-between;
     .footerItem {
+      img {
+        width: 5.3rem;
+        height: auto;
+      }
       li {
         margin-bottom: 0.875rem;
         a {
@@ -22,8 +26,13 @@ export const FooterStyle = styled.footer`
       flex-wrap: wrap;
       .footerItem {
         width: 100%;
-        text-align:center ;
+        text-align: center;
       }
     }
   }
+`;
+export const CopyRightStyle = styled.div`
+  font-size: 0.938rem;
+  text-align: center;
+  padding: 2rem 1rem;
 `;
